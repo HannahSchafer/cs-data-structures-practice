@@ -28,3 +28,14 @@ def sum_recursive(lst, i=0):
         return 0
 
     return lst[i] + sum_recursive(lst, i + 1)
+
+
+def reverse_list_r(my_list):
+
+    new_list = my_list[::-1]
+
+    for i, item in enumerate(my_list):
+        if isinstance(item, list):
+            new_list[i] = reverse_list(item)
+
+    return new_list
