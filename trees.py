@@ -9,15 +9,6 @@ class Node(object):
         self.children = children
 
 
-class Node(object):
-    """Node class for a BST."""
-
-    def __init__(self, data, left=None, right=None):
-        self.data = data
-        self.left = left
-        self.right = right
-
-
 class Tree(object):
     """Tree class."""
 
@@ -67,7 +58,39 @@ class Tree(object):
         for child in node.children:
             print_children_r(child, depth + 1)
 
-            
+
+"""BINARY TREES"""
+
+class BinaryNode(object):
+    """Node class for a BST."""
+
+    def __init__(self, data, left=None, right=None):
+        self.data = data
+        self.left = left
+        self.right = right
+
+
+    def make_BST(nums):
+        """Given a list of sorted numbers, make a binary search tree.
+        Returns the root node of a new BST that is valid and balanced.
+        """
+
+        # base case - nothing in list
+        if not nums:
+            return None
+
+        # find midpoint
+        mid_idx == len(nums)/2
+
+        # make new node out of midpoint
+        node = BinaryNode(nums[mid_idx])
+
+        # recursively find new left and right nodes
+        node.left = make_bst(nums[:mid_idx])
+        node.right = make_bst(nums[mid_idx + 1:])
+
+        return node
+
 
 
 

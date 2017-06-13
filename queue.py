@@ -76,14 +76,22 @@ class Queue(object):
 
 
     def is_empty(self):
+        """Returns true if queue is empty"""
+
+        return not bool(self.length)
 
 
 
     def empty(self):
         """Empties entire queue"""
 
+        self.length = 0
+        self.head = self.tail = None
 
 
+if __name__ == "__main__":
+
+    q = Queue(['Hannah', 'Samira', 'Natasha'])
 
 
 

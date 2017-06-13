@@ -237,6 +237,9 @@ class LinkedList(object):
         self.head = prev
 
 
+    def remove_node(self, data):
+
+
 if __name__ == "__main__":
 
     luna = Node('luna')
